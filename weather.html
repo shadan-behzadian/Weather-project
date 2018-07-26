@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="weather.css">
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="title">
+    <p >welcome to the weather forcast </p>
+    <p>Today's Weather</p>
+    </div>
+    <div id="forcast">
+        <input type="text" id="mySearch" placeholder=" Search by city...">
+        <button id='button'>find</button>
+       
+        <div v-if="search==''">
+           
+        </div>
+
+
+        <div v-else>
+            <div  class="row ">
+            
+            <div class="col-sm-4 Mymargine" v-for="daily in daily">
+          
+            <p>{{daily.day}} {{daily.dt_txt.slice(10,16)}}h</p>
+            <p>
+            {{weather.city.name}}</p>
+            <p>Weather</p>
+            <p>{{daily.weather[0].description}}</p>
+            <img v-bind:src="'http://openweathermap.org/img/w/'+daily.weather[0].icon+'.png'">
+            <p>Max Temp</p>
+            <p>{{daily.main.temp_max}}</p>
+            <p>Min Temp</p>
+            <p>{{daily.main.temp_min}}</p>
+            <p>Humidity</p>
+            <p>{{daily.main.humidity}}</p>
+            <p>Wind Speed</p>
+            <p>{{daily.wind.speed}}</p>
+
+        </div>
+                </div>
+</div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="weather.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

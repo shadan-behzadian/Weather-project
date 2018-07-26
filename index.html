@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="weather.css">
+</head>
+
+<body>
+    <div class="title">
+        <p>welcome to the weather forcast </p>
+        <p>Forcast</p>
+    </div>
+    <div id="forcast">
+        <input type="text" id="mySearch" placeholder=" Search by city...">
+        <button id='button'>find</button>
+
+        <div v-if="search==''">
+        </div>
+
+
+        <div v-else>
+            
+            <p>City</p>
+            <p>{{weather.city.name}}</p>
+            <p>Date</p>
+            <p>{{weather.list[8].dt_txt}}</p>
+            <p>Weather</p>
+            <p>{{weather.list[8].weather[8].description}}</p>
+            <p>Max Temp</p>
+            <p>{{weather.list[8].main.temp_max}}</p>
+            <p>Min Temp</p>
+            <p>{{weather.list[8].main.temp_min}}</p>
+            <p>Humidity</p>
+            <p>{{weather.list[8].main.humidity}}</p>
+            <p>Wind Speed</p>
+            <p>{{weather.list[8].wind.speed}}</p>
+
+        </div>
+
+    </div>
+  
+
+</body>
+</html>
+

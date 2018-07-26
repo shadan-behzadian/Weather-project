@@ -1,0 +1,39 @@
+body{
+    background-image:url(clouds.jpg);
+  
+    background-size: cover;
+}
+.title{
+   font-family: 'Fontdiner Swanky', cursive;
+    font-size: 50px;
+    text-align: center;
+    color: black;
+
+}
+
+#forcast{
+     font-family: 'Fontdiner Swanky', cursive;
+    font-size: 20px;
+    font-weight: 200px;
+    text-align: center; 
+    color: black;
+}
+
+.Mymargine {
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+#mySearch{
+    border-radius: 10px;
+    height: 30px;
+    width: 200px;
+   font-family: 'Fontdiner Swanky', cursive;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+::placeholder{
+  font-size: 15px;
+}
+

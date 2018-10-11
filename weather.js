@@ -38,7 +38,7 @@ function weather() {
     app.search = city;
 
 
-    fetch("http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&type=like&units=metric&lang=fa&APPID=ad86ce3ee764480409cf4761eedd5260", {
+    fetch("https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&type=like&units=metric&lang=fa&APPID=ad86ce3ee764480409cf4761eedd5260", {
             method: "GET"
         }).then(function (response) {
             if (response.ok) {

@@ -9,6 +9,10 @@
 //}  
 //}
 
+
+
+
+
 var app = new Vue({
     el: "#forcast",
     data: {
@@ -19,6 +23,19 @@ var app = new Vue({
 
     }
 });
+
+
+var input = document.getElementById("mySearch");
+input.addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("button").click();
+    }
+});
+
+
+
+
 
 document.getElementById("button").addEventListener("click", function () {
 
@@ -44,7 +61,7 @@ function weather() {
             if (response.ok) {
                 return response.json();
             }
-            alert("no data is found");
+            alert("please type correcly");
             console.log('Request succeeded: ' + response.statusText);
         }).then(function (json) {
             console.log(json);
@@ -65,7 +82,7 @@ function weather() {
 
 function dailyForcast(list) {
     var forecast = [];
-    for (var i = 0; i < 6; i = i + 1) {
+    for (var i = 0; i < 3; i = i + 1) {
         forecast.push(list[i]);
         var str = forecast[i].dt_txt;
         var date = str.slice(0, 10);
